@@ -13,5 +13,5 @@ I'm still learning, any tips would be appreciated, future improvements will be t
 How to install.
 - Clone the gihub
 - install the requirements.txt through pip
-- Add your auth tokens from pushover
+- Add your auth tokens from pushover to the main.py file
 - Run it on a crontab - I suggest 10m intervals */10 * * * *
