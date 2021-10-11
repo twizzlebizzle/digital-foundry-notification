@@ -9,6 +9,7 @@ I'm still learning, any tips would be appreciated, future improvements will be t
 - <s>Move pushover tokens to another file</s>
 - Implement email/discord options
 - Use auth to automatically download the videos to a file of my choosing (useful with plex)
+- Fix the videos.txt requirement
 
 How to install.
 - Clone the gihub
