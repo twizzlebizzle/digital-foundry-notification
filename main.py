@@ -76,7 +76,7 @@ def pushover(title, link):
 if __name__ == '__main__':
     logger.debug("Running __main__")
     for each in newvideolist():
-        logger.debug("There was a new video passed to pushover1")
+        logger.debug("There was a new video passed to pushover")
         string_split = stringsplit(each)
         pushover(string_split[0], string_split[1])
     filewriter("videos.txt", get_page_object().videos)
