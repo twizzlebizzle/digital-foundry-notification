@@ -53,11 +53,20 @@ def newvideolist():
 
 
 def pushover(title, link):
+    pushover_tokens = []
+
+    with open("pushover_auth.txt", "r") as file:
+        for token in file:
+            pushover_tokens.append(token.strip("\n"))
+
+    token = pushover_tokens[0].split(" ")
+    user = pushover_tokens[1].split(" ")
+
     conn = http.client.HTTPSConnection("api.pushover.net:443")
     conn.request("POST", "/1/messages.json",
                  urllib.parse.urlencode({
-                     "token": [TOKEN HERE],
-                     "user": [USER TOKEN HERE],
+                     "token": token[1],
+                     "user": user[1],
                      "message": title,
                      "url": link,
                  }), {"Content-type": "application/x-www-form-urlencoded"})
