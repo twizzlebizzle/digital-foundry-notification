@@ -59,14 +59,11 @@ def pushover(title, link):
         for token in file:
             pushover_tokens.append(token.strip("\n"))
 
-    token = pushover_tokens[0].split(" ")
-    user = pushover_tokens[1].split(" ")
-
     conn = http.client.HTTPSConnection("api.pushover.net:443")
     conn.request("POST", "/1/messages.json",
                  urllib.parse.urlencode({
-                     "token": token[1],
-                     "user": user[1],
+                     "token": pushover_tokens[0].split(" ")[1],
+                     "user": pushover_tokens[1].split(" ")[1],
                      "message": title,
                      "url": link,
                  }), {"Content-type": "application/x-www-form-urlencoded"})
