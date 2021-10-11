@@ -15,3 +15,5 @@ How to install.
 - install the requirements.txt through pip
 - Add your auth tokens from pushover to the main.py file
 - Run it on a crontab - I suggest 10m intervals */10 * * * *
+- When run as a crontab you need to hardcode the videos.txt page - eg /home/user/digital-foundry-notification/videos.txt
+- Crontab doesn't know the current directory.
