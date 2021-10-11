@@ -13,7 +13,13 @@ I'm still learning, any tips would be appreciated, future improvements will be t
 How to install.
 - Clone the gihub
 - install the requirements.txt through pip
-- Add your auth tokens from pushover to the main.py file
+- Add your auth tokens for pushover in a file called "pushover_auth.txt", in the format:
+
+```
+token [TOKEN HERE]
+user [TOKEN HERE]
+```
+
 - Run it on a crontab - I suggest 10m intervals */10 * * * *
 - When run as a crontab you need to hardcode the videos.txt page - eg /home/user/digital-foundry-notification/videos.txt
 - Crontab doesn't know the current directory.
